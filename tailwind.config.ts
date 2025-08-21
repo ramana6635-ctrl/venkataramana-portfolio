@@ -61,7 +61,36 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Neon colors for cyberpunk theme
+				neon: {
+					blue: 'hsl(var(--neon-blue))',
+					purple: 'hsl(var(--neon-purple))',
+					cyan: 'hsl(var(--neon-cyan))',
+					pink: 'hsl(var(--neon-pink))'
+				},
+				glass: {
+					bg: 'hsl(var(--glass-bg))',
+					border: 'hsl(var(--glass-border))',
+					shadow: 'hsl(var(--glass-shadow))'
 				}
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-secondary': 'var(--gradient-secondary)',
+				'gradient-glass': 'var(--gradient-glass)'
+			},
+			fontFamily: {
+				mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+				sans: ['Inter', 'system-ui', 'sans-serif']
+			},
+			backdropBlur: {
+				'glass': '20px'
+			},
+			boxShadow: {
+				'neon': 'var(--shadow-neon)',
+				'neon-hover': 'var(--shadow-neon-hover)',
+				'glass': 'var(--shadow-glass)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -88,7 +117,10 @@ export default {
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 6s ease-in-out infinite',
+				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+				'gradient': 'gradient-shift 3s ease infinite'
 			}
 		}
 	},
