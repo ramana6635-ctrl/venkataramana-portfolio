@@ -16,31 +16,32 @@ const Portfolio = () => {
   };
 
   const skills = {
-    frontend: ['React', 'TypeScript', 'Next.js', 'Vue.js', 'Tailwind CSS', 'Sass'],
-    backend: ['Node.js', 'Python', 'Express', 'FastAPI', 'GraphQL', 'REST APIs'],
-    database: ['PostgreSQL', 'MongoDB', 'Redis', 'Supabase', 'Firebase'],
-    devops: ['Docker', 'AWS', 'Vercel', 'GitHub Actions', 'Nginx']
+    languages: ['Python', 'PHP', 'SQL', 'JavaScript'],
+    frameworks: ['Django', 'Laravel', 'Flask', 'React.js'],
+    cloud: ['Azure Data Factory', 'Azure Functions', 'Azure Blob', 'Docker', 'GitHub', 'GitLab'],
+    databases: ['MySQL', 'MongoDB', 'Azure SQL', 'PostgreSQL'],
+    tools: ['HTML', 'CSS', 'Bootstrap', 'REST APIs', 'Git']
   };
 
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with real-time inventory management, payment processing, and admin dashboard.",
-      tech: ["React", "Node.js", "PostgreSQL", "Stripe", "Docker"],
+      title: "DR.ERP Software",
+      description: "Comprehensive ERP system for inventory management, sales tracking, accounts management, and detailed reporting for business operations.",
+      tech: ["Laravel", "PHP", "MySQL", "JavaScript", "jQuery", "Docker", "GitLab CI"],
       liveDemo: "#",
       github: "#"
     },
     {
-      title: "Real-Time Chat Application",
-      description: "WebSocket-based chat app with rooms, file sharing, and message encryption for secure communication.",
-      tech: ["Vue.js", "Socket.io", "MongoDB", "JWT", "Redis"],
+      title: "Personal Diary Web App",
+      description: "Secure web application with CRUD operations, user authentication, and cloud deployment for personal diary management.",
+      tech: ["Flask", "SQLite", "Bootstrap", "Azure App Services", "Azure Blob Storage"],
       liveDemo: "#",
       github: "#"
     },
     {
-      title: "AI-Powered Analytics Dashboard",
-      description: "Machine learning dashboard for data visualization and predictive analytics with interactive charts.",
-      tech: ["React", "Python", "TensorFlow", "D3.js", "FastAPI"],
+      title: "Data Engineering & Automation Tools",
+      description: "Automated data ingestion pipelines with comprehensive logging, monitoring, and ETL processes for efficient data management.",
+      tech: ["Python", "Azure Data Factory", "Azure Functions", "ETL Pipelines"],
       liveDemo: "#",
       github: "#"
     }
@@ -48,18 +49,18 @@ const Portfolio = () => {
 
   const blogPosts = [
     {
-      title: "Building Scalable Microservices with Node.js",
-      snippet: "Learn how to architect and deploy microservices that can handle millions of requests...",
+      title: "Building Scalable Applications with Azure Cloud",
+      snippet: "Exploring Azure services for modern web development and how to leverage cloud computing for scalable solutions...",
       readMore: "#"
     },
     {
-      title: "The Future of Web Development: WebAssembly",
-      snippet: "Exploring how WebAssembly is revolutionizing web performance and opening new possibilities...",
+      title: "Full-Stack Development with Django and React",
+      snippet: "A comprehensive guide to building modern web applications using Django backend with React frontend...",
       readMore: "#"
     },
     {
-      title: "State Management in Modern React Applications",
-      snippet: "A comprehensive guide to choosing the right state management solution for your React app...",
+      title: "Data Engineering Best Practices with Python",
+      snippet: "Learn effective data pipeline design patterns and automation techniques for robust data processing...",
       readMore: "#"
     }
   ];
@@ -82,19 +83,19 @@ const Portfolio = () => {
         
         <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 neon-text animate-pulse-glow">
-            Alex Chen
+            Ambala Venkata Ramana
           </h1>
           <h2 className="text-2xl md:text-4xl font-mono mb-8 text-secondary">
-            Full-Stack Developer
+            Full-Stack Developer | Software Engineer
           </h2>
           <p className="text-xl md:text-2xl mb-12 text-muted-foreground max-w-2xl mx-auto">
-            Building modern web applications with creativity and precision
+            Building scalable applications with creativity, precision, and modern tech
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <a 
               href="/resume.pdf" 
-              download
+              download="Ambala_Venkata_Ramana_Resume.pdf"
               className="btn-neon inline-flex items-center gap-2"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -130,13 +131,12 @@ const Portfolio = () => {
                   Passionate Developer
                 </h3>
                 <p className="text-lg mb-6 text-muted-foreground leading-relaxed">
-                  With over 5 years of experience in full-stack development, I specialize in creating 
-                  scalable web applications that solve real-world problems. I'm passionate about clean 
-                  code, user experience, and cutting-edge technologies.
+                  Skilled in Python, PHP, JavaScript, React.js, Laravel, Django, Azure Cloud, REST APIs, 
+                  SQL & NoSQL databases. Currently working as Software Engineer at Bigapple Life Style Pvt Ltd, Hyderabad.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  When I'm not coding, you'll find me exploring new frameworks, contributing to open-source 
-                  projects, or sharing knowledge with the developer community through blogs and talks.
+                  Passionate about building efficient, secure, and scalable applications that solve complex 
+                  business challenges using modern technologies and best practices.
                 </p>
               </div>
               
@@ -166,11 +166,11 @@ const Portfolio = () => {
             Skills & Technologies
           </h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
             {Object.entries(skills).map(([category, skillList]) => (
               <div key={category} className="glass-card">
                 <h3 className="text-xl font-bold mb-6 text-primary capitalize">
-                  {category}
+                  {category === 'cloud' ? 'Cloud/DevOps' : category}
                 </h3>
                 <div className="space-y-4">
                   {skillList.map((skill, index) => (
@@ -340,7 +340,7 @@ const Portfolio = () => {
               
               <div className="text-center">
                 <a
-                  href={`mailto:alex.chen@example.com?subject=Portfolio Contact&body=${formData.message}`}
+                  href={`mailto:amabalavenkataramana2@gmail.com?subject=Portfolio Contact&body=${formData.message}`}
                   className="btn-neon inline-flex items-center gap-2"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -366,7 +366,7 @@ const Portfolio = () => {
               { icon: 'github', url: 'https://github.com', label: 'GitHub' },
               { icon: 'linkedin', url: 'https://linkedin.com', label: 'LinkedIn' },
               { icon: 'twitter', url: 'https://twitter.com', label: 'Twitter' },
-              { icon: 'email', url: 'mailto:alex.chen@example.com', label: 'Email' }
+              { icon: 'email', url: 'mailto:amabalavenkataramana2@gmail.com', label: 'Email' }
             ].map((social) => (
               <a
                 key={social.icon}
@@ -398,7 +398,7 @@ const Portfolio = () => {
       <footer className="glass py-8 px-6 text-center">
         <div className="max-w-4xl mx-auto">
           <p className="text-muted-foreground mb-4">
-            &copy; 2024 Alex Chen. All rights reserved.
+            &copy; 2025 Ambala Venkata Ramana. All rights reserved.
           </p>
           <div className="flex justify-center gap-6 text-sm">
             <a href="#about" className="hover:text-primary transition-colors">About</a>
